@@ -11,12 +11,12 @@ Your task is to rewrite the features of the TIY Database using `pg` and `sinatra
 Read and complete _Explorer Mode_ first. For each mode read *all* of the requirements before starting your plan and work on the code.
 
 ## Explorer Mode
-- The landing page of the application should show a welcome message to the user explaining what the TIY Database is
-- The top navigation menu should have an entry for `Employees`
-- When you click the `Employees` nav item it should take you to an employee *index* URL which shows
+✅ The landing page of the application should show a welcome message to the user explaining what the TIY Database is
+✅ The top navigation menu should have an entry for `Employees`
+✅ When you click the `Employees` nav item it should take you to an employee *index* URL which shows
   - List of all employee's in a table containing: name, phone, address, position, salary, slack, github
   - Each row in the table should have a link to show that user
-- On the employee *index* URL there should be a link to take the user to a *new* employee URL
+✅ On the employee *index* URL there should be a link to take the user to a *new* employee URL
   - This page should show a form to fill in the details of an employee
   - When clicking the _submit_ button for this form, a new employee should be created
   - Redirect the user back to the *index* URL

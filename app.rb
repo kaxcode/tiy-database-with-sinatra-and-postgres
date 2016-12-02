@@ -31,3 +31,15 @@ post "/create_employee" do
 
   redirect to("/employees")
 end
+
+get "/show_employee" do
+  id = params["id"]
+  database = PG.connect(dbname: 'tiy-database')
+  @rows = database.exec('SELECT * FROM employees where id = $1', [id])
+
+  erb :show_employee
+end
+
+post "/search_employee" do
+
+end
