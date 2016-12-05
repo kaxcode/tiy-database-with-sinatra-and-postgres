@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Search Employee</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -33,16 +33,38 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="/employees">Employees</a></li>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/employees">Employees</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container-fluid">
-      <div class="jumbotron text-center">
-        <h1>TIY Database!</h1>
-        <h2>Your data, when you need it.</h2>
+    <div class="container">
+      <ul class="list-group">
+        <% @rows.each do |row| %>
+        <li class="list-group-item list-group-item-success">
+          Name: <%= row["name"] %>
+        </li>
+        <li class="list-group-item">
+          Phone: <%= row["phone"] %>
+        </li>
+        <li class="list-group-item">
+          Address: <%= row["address"] %>
+        </li>
+        <li class="list-group-item">
+          Position: <%= row["position"] %>
+        </li>
+        <li class="list-group-item">
+          Salary: <%= row["salary"] %>
+        </li>
+        <li class="list-group-item">
+          Github: <%= row["github"] %>
+        </li>
+        <li class="list-group-item">
+          Slack: <%= row["slack"] %>
+        </li>
+        <% end %>
+      </ul>
       </div>
     </div>
 

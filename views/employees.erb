@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Employees</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -41,15 +41,17 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 pull-right">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Search</button>
-            </span>
+        <div class="col-lg-3">
+            <form action="/search_employee" method="post">
+              <div class="input-group">
+                <input name= "search"  class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Search</button>
+                </span>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
       <table class="table table-bordered table-condensed table-hover">
         <thead>
           <th>Name</th>
