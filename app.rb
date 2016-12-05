@@ -37,7 +37,7 @@ get "/show_employee" do
   database = PG.connect(dbname: 'tiy-database')
   @rows = database.exec('SELECT * FROM employees where id = $1', [id])
 
-  erb :show_employee
+  erb :employee
 end
 
 post "/search_employee" do
@@ -46,17 +46,5 @@ post "/search_employee" do
   database = PG.connect(dbname: 'tiy-database')
   @rows = database.exec('SELECT * FROM employees where name = $1 or slack =$1 or github =$1', [search])
 
-  erb :search_employee
+  erb :employee
 end
-
-# def search
-#     puts "What name, github, or slack are you searching for? "
-#     search_text = gets.chomp
-#     search_result = @people.find_all { |person| person.name.include?(search_text) || person.slack_account == search_text || person.github_account == search_text }
-#     if search_result.empty?
-#       banner "#{search_text} NOT FOUND!"
-#     end
-#     search_result.each do |person|
-#       banner_three "Name: #{person.name} | Phone Number:#{person.phone_number} | Address: #{person.address}| Position: #{person.position} | Salary: #{person.salary} | Slack Account: #{person.slack_account} | Github Account: #{person.github_account}"
-#     end
-#   end

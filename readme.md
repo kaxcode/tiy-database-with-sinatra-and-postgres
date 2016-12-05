@@ -22,7 +22,7 @@ Read and complete _Explorer Mode_ first. For each mode read *all* of the require
   - Redirect the user back to the *index* URL
 ✅ On the employee *index* URL there should be a _search_ form that allows you to type in some text and click a *search* button
   - When the form is submitted the page should now display any matching employees by name (partial) or slack (full match) or github (full match)
-- When showing a player use a nice format for showing all of the user's information.
+✅ When showing a player use a nice format for showing all of the user's information.
   - Maybe use a `list-group` or other bootstrap component to format the data
 
 ## Adventure Mode
